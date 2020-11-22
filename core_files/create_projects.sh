@@ -4,8 +4,8 @@
 
 echo creating the folders
 cd /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/ #navigate to a folder for outputs
-for i in [list of all 3x3s tiles list]; do
-    echo $i
+for i in [list of all "projects"]; do
+    echo $i # This should be the project ID
     # cd ~/Documents/test  # set your output folder in this line, prob don't need
     y=$( echo $i | sed -r "s/(.+)\..+/\1/" ) # This removes the file extension for the folder name
 
@@ -24,13 +24,14 @@ for i in [list of all 3x3s tiles list]; do
           -r near -of GTiff -co COMPRESS=JPEG -co JPEG_QUALITY=75 -co PHOTOMETRIC=YCBCR\
           /media/eubtube/Seagate\ Backup\ Plus\ Drive/Congo_Tifs/raster/GeoTIFF/$j.tif\
           $j.tif
-      done < tiles_$i.txt # file from above, have a replacable name
+      done < tiles_$i.txt # file from above, should have the project id name
       cd ..
 
     mkdir "Vector"
       cd Vector
-      cp $i_aoi.gpkg #from file with all aois OR insert python script here that creates AOI from tile names and places here..
+      cp $i_aoi.gpkg # from file with all aois OR insert python script here that creates AOI from tile names and places here.
       cp '/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/vector/Border.gpkg' . #change to vector file in github
+      # Clip Buildings to Project AOI
       ogr2ogr -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\ # change path
        -clipsrc $i_aoi.gpkg -f 'GPKG' -overwrite $i_buildings.gpkg /home/eubtube/Documents/DRC-Uganda_Collines_3D/\
       Vector/2019_Maxar_Ecopia_DRC-Uganda_building_footprints.gpkg # change path
@@ -39,6 +40,7 @@ for i in [list of all 3x3s tiles list]; do
     cp /home/eubtube/Documents/colline_automation/files/3d_template_clean.qgs #change path
 
     cd Raster
+      # Clip DEM to Project AOI
       gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\ # change path
        -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/$i/Vector/$i_aoi.gpkg\
        -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
@@ -52,11 +54,13 @@ done
 
 echo finished
 
-# Next Steps
+###########################################################################################
+
+# Overall Workflow
 # 1) create the AOI & Place in Vector folder
   # Do with python when pulling the tile IDs from `Grid Value and Geopandas Exploration.ipynb`
   # Search for col, row then throw range of all vals into a txt file
-  
+
 # 2) Clip the DSM to the AOI and place result in Raster folder
 gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\
  -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/kisoro_5/Vector/aoi.gpkg\
