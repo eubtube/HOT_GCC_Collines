@@ -18,6 +18,8 @@ colline_extent.gpkg
 *.sql
 *.sqlite
 *.qgs~
+*.gpkg-shm
+*.gpkg-wal
 
 
 # OS generated files #

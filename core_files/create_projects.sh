@@ -20,10 +20,10 @@ for i in [list of all "projects"]; do
       while read j; do
         echo Converting and Copying $j
         # Convert tiles to Africa Albers and send to file
-        gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\ #change
-          -r near -of GTiff -co COMPRESS=JPEG -co JPEG_QUALITY=75 -co PHOTOMETRIC=YCBCR\
+        gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\
+         -r near -of GTiff -co COMPRESS=JPEG -co JPEG_QUALITY=75 -co PHOTOMETRIC=YCBCR\
           /media/eubtube/Seagate\ Backup\ Plus\ Drive/Congo_Tifs/raster/GeoTIFF/$j.tif\
-          $j.tif
+           $j.tif
       done < tiles_$i.txt # file from above, should have the project id name
       cd ..
 
@@ -41,14 +41,14 @@ for i in [list of all "projects"]; do
 
     cd Raster
       # Clip DEM to Project AOI
-      gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\ # change path
+      gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\
        -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/$i/Vector/$i_aoi.gpkg\
-       -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
-       "/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/raster/jaxa/jaxa_all_merged.tif"\ #change to vector file in github
-       $i_dem.tif
+        -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
+         "/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/raster/jaxa/jaxa_all_merged.tif"\
+          $i_dem.tif
     cd ..
 
-    python3 add_to_qgisproject.py # pass any arguments that will be necessary
+    python3.6 add_to_qgisproject.py # pass any arguments that will be necessary
     # also ensure that QGIS installation of Python is being used
 done
 
@@ -76,3 +76,9 @@ Vector/2019_Maxar_Ecopia_DRC-Uganda_building_footprints.gpkg
 
 # 4) Manipulate HTML file to include all the new outputs in the QGIS File
     # PyQGIS api to place files into empty qgis 3D project (see `add_to_qgisproject.py`)
+
+gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\
+ -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/Mabuku_1/Vector/aoi.gpkg\
+  -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
+   "/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/raster/jaxa/jaxa_all_merged.tif"\
+    mabuku_1_dem.tif
