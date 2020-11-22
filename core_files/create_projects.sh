@@ -56,6 +56,7 @@ echo finished
 # 1) create the AOI & Place in Vector folder
   # Do with python when pulling the tile IDs from `Grid Value and Geopandas Exploration.ipynb`
   # Search for col, row then throw range of all vals into a txt file
+  
 # 2) Clip the DSM to the AOI and place result in Raster folder
 gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\
  -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/kisoro_5/Vector/aoi.gpkg\
