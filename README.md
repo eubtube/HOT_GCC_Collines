@@ -48,7 +48,7 @@ intermediary `colline_grid_joined.gpkg` file and saved it as the final
 In the `files` folder, you will find some of the geospatial files needed to test
 or view some of the scripts or QGIS projects for visualization.
 
-Included:
+**Included:**
 - `Border.gpkg`: DRC polygon file (UTM 35S Projection)
 - `maxar_tile_extents.gpkg`: A polygon file with the footprints of the Maxar tiles
 for the region
@@ -58,18 +58,16 @@ file above.
 - `colline_grid_joined_adj.gpkg`: a grid based on the colline extents file above.
 Grid draped over the entire colline area and a row/column location associated
 with each cell that can ultimately be associated with a quadkey for the tile ID.
-**for use with the `iterate_grid.ipynb` file to break
-break the grid into projects**
+**For use with the `iterate_grid.ipynb` file to break the grid into projects**
 - `102022.prj`: Esri projection file for Africa Albers projection
 - `colline_grids.qgs`: a QGIS project for viewing the colline tile extents and the grid
 for visualization of files for `iterate_grid.ipynb`.
 - `3d_template_clean.qgs`: a QGIS project for testing `add_to_qgisproject.py`
 
-Not Included (but needed for the scripts):
+**Not Included (but needed for the scripts):**
 - The single JAXA file for the entire AOI in Africa Albers Projections used to make smaller project DEMs (about 5GB)
-- Maxar Images (too big to share, but can share a sample)[150+ GB]
+- Maxar Image tiles with quadkey id filenames (too big to share, but can share a sample)[150+ GB]
 - DRC-UG Building Footprints (3.1 GB)
 
-
 Still learning best practices for organizing repos and I'm aware this is quite a
-mess, so I'm welcome to suggestions on how to better organize this into folders
+mess, so I'm welcome to suggestions on how to better organize this into folders.
