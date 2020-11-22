@@ -14,7 +14,7 @@ overview of tasks done and to be done for this project. That's a good place to
 start. Also included is a tutorial doc for how to do the digitization once a
 project is set up.
 
-In the `scripts` folder, you'll find the three core files/scripts for the project:
+In the `core_files` folder, you'll find four core files for the project:
 
 - `create_projects.sh`: the main script that will iterate through lists of
 3x3 groups of tiles. This currently has several placeholders in it that need
@@ -26,7 +26,7 @@ is, with the exception of setting the extent, which worked as an indvidual
 command in the QGIS Py console, but did not work in the overall script. This
 has been opened as an issue.
 
-- `Grid Value and Geopandas Exploration.ipynb`: A Jupyter notebook where I
+- `iterate_grid.ipynb`: A Jupyter notebook where I
 am attempting to set up a way to interate through a 31/30 grid going three
 columns and three columns at a time to determine if there is an associated
 Maxar tile in these cells.  If there are associated Maxar tiles in any of
@@ -34,7 +34,8 @@ the cells of the smaller 3x3 grid iteration, those quadkey codes would be
 saved into a new text file. Each 3x3 grid iteration would also need a unique
 ID that would be fed into a list of all the smaller grids (as a .txt) that
 would then be iterated through in the `create_projects.sh` script to make
-the directories and projects.
+the directories and projects. **requires the `colline_grid_joined_adj.gpkg` from
+the `files` folder**
 
 - `gdal_stuff.sh` is simply a list of the `GDAL` snippets that are used in
 `create_projects.sh` file above.
@@ -46,12 +47,12 @@ share a sample).
 
 Included:
 - `Border.gpkg`: DRC polygon file (UTM 35S Projection)
-- `maxar_tile_extents`: A polygon file with the footprints of the Maxar tiles
+- `maxar_tile_extents.gpkg`: A polygon file with the footprints of the Maxar tiles
 for the region
-- `maxar_collines`: Polygon file with the footprints for the colline regions
+- `maxar_collines.gpkg`: Polygon file with the footprints for the colline regions
 - `colline_extent.gpkg`: Extent of colline areas used to clip the colline extent
 file above.
-- `colline_grid_joined_adj`: a grid based on the colline extents file above.
+- `colline_grid_joined_adj.gpkg`: a grid based on the colline extents file above.
 Grid draped over the entire colline area and a row/column location associated
 with each cell that can ultimately be associated with a quadkey for the tile ID.
 **for use with the `Grid Value and Geopandas Exploration.ipynb` file to break
