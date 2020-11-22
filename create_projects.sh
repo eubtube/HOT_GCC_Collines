@@ -46,6 +46,8 @@ for i in [list of all 3x3s tiles list]; do
        $i_dem.tif
     cd ..
 
+    python3 add_to_qgisproject.py # pass any arguments that will be necessary
+    # also ensure that QGIS installation of Python is being used
 done
 
 echo finished
