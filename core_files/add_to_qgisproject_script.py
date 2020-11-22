@@ -6,7 +6,9 @@ from qgis.PyQt.QtCore import (
     QRectF,
 )
 
-from qgis.core import (
+from qgis.core import *
+'''
+(
     QgsProject,
     QgsApplication,
     QgsLayerTreeModel,
@@ -39,6 +41,7 @@ from qgis.core import (
     QgsSpatialIndex,
     QgsVectorLayerUtils
 )
+'''
 
 from qgis.core.additions.edit import edit
 
@@ -54,13 +57,9 @@ from qgis.gui import (
     QgsRubberBand,
 )
 
-"""
-QgsProject, QgsLayerTreeGroup, QgsLayerTreeLayer, QgsVectorLayer, QgsLayerTreeModel
-"""
+#ProjectName = "sw_ug_1_test.qgs"
 
-ProjectName = "sw_ug_1_test.qgs"
-
-# Might need to initate qgis when working from Bash
+# Used to initate qgis when working from Bash
 QgsApplication.setPrefixPath("/usr/bin/qgis", True)
 qgs = QgsApplication([], False) # "False" prevents the gui from opening
 qgs.initQgis()
@@ -73,15 +72,16 @@ project.read('~/Documents/colline_automation/files/3d_template_clean.qgs')
 pathv = '/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Vector/'
 pathr = '/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/'
 
-#canvas = iface.mapCanvas()
-
 
 ###### Add Vector Layers
 
 # Add and style buildings
+ # Creates layer1 variable
 layer1 = QgsVectorLayer(pathv + "sw_ug_1_buildings.gpkg", "Buildings", "ogr")
 if not layer1 or not layer1.isValid():
     print("Layer failed to load!")
+# adds layer to the canvas
+QgsProject.instance().addMapLayer(layer1, True)
 
 print(layer1.displayField())
 
@@ -104,13 +104,14 @@ layer1.triggerRepaint()
 
 # Add and style border   Each of these as a function
 
-layer2 = QgsVectorLayer(pathv + "Border.gpkg|layername=Border", "Border", "ogr")
+layer2 = QgsVectorLayer(pathv + "border.gpkg|layername=border", "Border", "ogr")
 if not layer2 or not layer2.isValid():
     print("Layer failed to load!")
 
+QgsProject.instance().addMapLayer(layer2, True)
+
 print(layer2.displayField())
 
-#layer2 = iface.activeLayer()
 symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
                                      'color': '255,158,23,255',
                                      'joinstyle': 'bevel',
@@ -125,8 +126,7 @@ symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,
 layer2.renderer().setSymbol(symbol)
 layer2.triggerRepaint()
 
-# Sets the extent to the clipped buildings
-#layer1 = iface.activeLayer()
+# Sets the extent to the clipped buildings - This is working
 layer1.selectAll()
 canvas = QgsMapCanvas()
 canvas.zoomToSelected(layer1)
@@ -135,7 +135,6 @@ layer1.removeSelection()
 ######## Add Raster Layers
 
 # Set up Tiles Group
-layerTree = iface.layerTreeCanvasBridge().rootGroup()
 root = QgsProject.instance().layerTreeRoot()
 tiles_group = root.insertGroup(-1, "Tiles")
 
@@ -144,7 +143,7 @@ for filename in os.listdir(pathr):
     if (filename.endswith('.tif')) & (('dem' in filename) == False):
         rlayer = QgsRasterLayer(pathr + filename, filename.strip('.tif'))  # Os.path - get only extension
         QgsProject.instance().addMapLayer(rlayer, False)
-        layerTree.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
+        root.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
         node_rlayer = QgsLayerTreeLayer(rlayer)
         tiles_group.insertChildNode(0, node_rlayer)
         root.removeLayer(rlayer)
@@ -156,7 +155,7 @@ for filename in os.listdir(pathr):
 dem = 'sw_ug_1_dem.tif'
 dem_layer = QgsRasterLayer(pathr + dem, dem.strip('.tif'))
 QgsProject.instance().addMapLayer(dem_layer, False)
-layerTree.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
+root.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
 
 
 ''' Don't seem to be able to set up a 3D view with current bindings...
@@ -164,8 +163,11 @@ layerTree.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
 Qgs3D.initialize()
 '''
 
+print(QgsProject.instance().mapLayers().values())
+
 # Write to the QGIS Project, commented out when testing to avoid overwriting blank file
-#project.write('/home/eubtube/Documents/colline_automation/3d_template_clean.qgs')
+#project.write('/home/eubtube/Documents/colline_automation/3d_template_clean_test.qgs')
+project.write('/home/eubtube/Documents/colline_automation/files/3d_template_clean.qgs')
 
 # Exit QGIS
 qgs.exitQgis()

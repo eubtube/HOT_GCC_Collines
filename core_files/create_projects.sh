@@ -41,7 +41,7 @@ for i in [list of all "projects"]; do
 
     cd Raster
       # Clip DEM to Project AOI
-      gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\
+      gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\
        -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/$i/Vector/$i_aoi.gpkg\
         -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
          "/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/raster/jaxa/jaxa_all_merged.tif"\
@@ -76,9 +76,3 @@ Vector/2019_Maxar_Ecopia_DRC-Uganda_building_footprints.gpkg
 
 # 4) Manipulate HTML file to include all the new outputs in the QGIS File
     # PyQGIS api to place files into empty qgis 3D project (see `add_to_qgisproject.py`)
-
-gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\
- -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/Mabuku_1/Vector/aoi.gpkg\
-  -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
-   "/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/raster/jaxa/jaxa_all_merged.tif"\
-    mabuku_1_dem.tif

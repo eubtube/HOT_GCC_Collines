@@ -1,5 +1,5 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" saveUser="eubtube" version="3.16.0-Hannover" saveDateTime="2020-11-11T14:38:21" saveUserFull="Aaron">
+<qgis saveDateTime="2020-12-01T00:00:54" projectname="" saveUserFull="Aaron" saveUser="eubtube" version="3.16.0-Hannover">
   <homePath path=""/>
   <title></title>
   <autotransaction active="0"/>
@@ -7,100 +7,87 @@
   <trust active="0"/>
   <projectCrs>
     <spatialrefsys>
-      <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
-      <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
-      <srsid>27145</srsid>
-      <srid>102022</srid>
-      <authid>EPSG:102022</authid>
-      <description>Africa_Albers_Equal_Area_Conic</description>
-      <projectionacronym>aea</projectionacronym>
+      <wkt></wkt>
+      <proj4></proj4>
+      <srsid>0</srsid>
+      <srid>0</srid>
+      <authid></authid>
+      <description></description>
+      <projectionacronym></projectionacronym>
       <ellipsoidacronym></ellipsoidacronym>
       <geographicflag>false</geographicflag>
     </spatialrefsys>
   </projectCrs>
   <layer-tree-group>
     <customproperties/>
-    <custom-order enabled="0"/>
+    <layer-tree-layer legend_exp="" expanded="1" id="Border_076f10a8_c7bb_48ce_9bed_1fcab4415fb2" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Vector/border.gpkg|layername=border" providerKey="ogr" checked="Qt::Checked" name="Border" legend_split_behavior="0" patch_size="-1,-1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer legend_exp="" expanded="1" id="Buildings_4148f525_c16b_4ee7_a08a_e74c76ce394e" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Vector/sw_ug_1_buildings.gpkg" providerKey="ogr" checked="Qt::Checked" name="Buildings" legend_split_behavior="0" patch_size="-1,-1">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="Tiles">
+      <customproperties/>
+      <layer-tree-layer legend_exp="" expanded="1" id="102323232010_b21007e2_f6d8_49fa_9b85_e14a2e98ff1c" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323232010.tif" providerKey="gdal" checked="Qt::Checked" name="102323232010" legend_split_behavior="0" patch_size="-1,-1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer legend_exp="" expanded="1" id="102323230232_56ee57c7_8ad0_4a23_8b0c_43d97895d7d6" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230232.tif" providerKey="gdal" checked="Qt::Checked" name="102323230232" legend_split_behavior="0" patch_size="-1,-1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer legend_exp="" expanded="1" id="102323230230_53551f27_99cb_4fc6_8967_4eeab7085da7" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230230.tif" providerKey="gdal" checked="Qt::Checked" name="102323230230" legend_split_behavior="0" patch_size="-1,-1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer legend_exp="" expanded="1" id="102323230223_4eddfcaa_f6d0_4078_be2e_8eaa9207efc9" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230223.tif" providerKey="gdal" checked="Qt::Checked" name="102323230223" legend_split_behavior="0" patch_size="-1,-1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer legend_exp="" expanded="1" id="102323230221_bfce5f56_2ce2_4b75_80d8_927383fc1d43" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230221.tif" providerKey="gdal" checked="Qt::Checked" name="102323230221" legend_split_behavior="0" patch_size="-1,-1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer legend_exp="" expanded="1" id="102323230220_3e959026_dce4_45ed_aafe_ebe58f9660e0" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230220.tif" providerKey="gdal" checked="Qt::Checked" name="102323230220" legend_split_behavior="0" patch_size="-1,-1">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-layer legend_exp="" expanded="1" id="sw_ug_1_dem_16b537fd_ec93_49da_9f86_1178e9ac4bda" source="/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/sw_ug_1_dem.tif" providerKey="gdal" checked="Qt::Checked" name="sw_ug_1_dem" legend_split_behavior="0" patch_size="-1,-1">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>Buildings_4148f525_c16b_4ee7_a08a_e74c76ce394e</item>
+      <item>Border_076f10a8_c7bb_48ce_9bed_1fcab4415fb2</item>
+      <item>102323230220_3e959026_dce4_45ed_aafe_ebe58f9660e0</item>
+      <item>102323230221_bfce5f56_2ce2_4b75_80d8_927383fc1d43</item>
+      <item>102323230223_4eddfcaa_f6d0_4078_be2e_8eaa9207efc9</item>
+      <item>102323230230_53551f27_99cb_4fc6_8967_4eeab7085da7</item>
+      <item>102323230232_56ee57c7_8ad0_4a23_8b0c_43d97895d7d6</item>
+      <item>102323232010_b21007e2_f6d8_49fa_9b85_e14a2e98ff1c</item>
+      <item>sw_ug_1_dem_16b537fd_ec93_49da_9f86_1178e9ac4bda</item>
+    </custom-order>
   </layer-tree-group>
-  <snapping-settings type="1" self-snapping="0" unit="1" mode="2" intersection-snapping="0" tolerance="12" maxScale="0" minScale="0" enabled="0" scaleDependencyMode="0">
-    <individual-layer-settings/>
+  <snapping-settings unit="1" scaleDependencyMode="0" type="1" tolerance="12" self-snapping="0" minScale="0" enabled="0" mode="2" intersection-snapping="0" maxScale="0">
+    <individual-layer-settings>
+      <layer-setting type="1" id="Buildings_4148f525_c16b_4ee7_a08a_e74c76ce394e" tolerance="12" units="1" minScale="0" enabled="1" maxScale="0"/>
+      <layer-setting type="1" id="Border_076f10a8_c7bb_48ce_9bed_1fcab4415fb2" tolerance="12" units="1" minScale="0" enabled="1" maxScale="0"/>
+    </individual-layer-settings>
   </snapping-settings>
   <relations/>
-  <mapcanvas name="theMapCanvas" annotationsVisible="1">
-    <units>meters</units>
+  <mapcanvas annotationsVisible="1" name="">
+    <units>unknown</units>
     <extent>
-      <xmin>-1184756.39268210344016552</xmin>
-      <ymin>-520447.35879377974197268</ymin>
-      <xmax>3130764.59740553982555866</xmax>
-      <ymax>648954.53762463154271245</ymax>
+      <xmin>468864.22135552437976003</xmin>
+      <ymin>-105672.87976964443805628</ymin>
+      <xmax>497572.22718915902078152</xmax>
+      <ymax>-72774.12806383339921013</ymax>
     </extent>
     <rotation>0</rotation>
-    <destinationsrs>
-      <spatialrefsys>
-        <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
-        <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
-        <srsid>27145</srsid>
-        <srid>102022</srid>
-        <authid>EPSG:102022</authid>
-        <description>Africa_Albers_Equal_Area_Conic</description>
-        <projectionacronym>aea</projectionacronym>
-        <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>false</geographicflag>
-      </spatialrefsys>
-    </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <expressionContextScope/>
   </mapcanvas>
-  <projectModels/>
-  <legend updateDrawingOrder="true"/>
-  <mapViewDocks/>
-  <mapViewDocks3D>
-    <view x="190" width="1524" y="476" floating="0" name="3D Map 1" height="537" area="8">
-      <qgis3d>
-        <origin x="-344565" y="-476302" z="0"/>
-        <camera field-of-view="45"/>
-        <color background="255,255,255,255" selection="255,255,0,255"/>
-        <crs>
-          <spatialrefsys>
-            <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
-            <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
-            <srsid>27145</srsid>
-            <srid>102022</srid>
-            <authid>EPSG:102022</authid>
-            <description>Africa_Albers_Equal_Area_Conic</description>
-            <projectionacronym>aea</projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <point-lights/>
-        <directional-lights>
-          <directional-light x="-0.32" y="-0.91" z="-0.27" color="255,255,255,255" intensity="1"/>
-        </directional-lights>
-        <terrain shading-enabled="0" texture-size="512" exaggeration="1" show-labels="0" map-theme="" max-terrain-error="3" max-ground-error="1">
-          <shading-material ambient="25,25,25,255" diffuse="179,179,179,255" shininess="0" specular="255,255,255,255"/>
-          <layers/>
-          <terrainLayers/>
-          <generator type="flat"/>
-        </terrain>
-        <renderers/>
-        <skybox panoramic-texture-path="" posZ-texture-path="" posY-texture-path="" negZ-texture-path="" posX-texture-path="" skybox-enabled="0" negX-texture-path="" negY-texture-path=""/>
-        <shadow-rendering shadow-rendering-enabled="0" shadow-map-resolution="2048" selected-directional-light="-1" max-shadow-rendering-distance="500" shadow-bias="1e-05"/>
-        <debug terrain-tile-info="0" show-light-sources="0" bounding-boxes="0" camera-view-center="0"/>
-      </qgis3d>
-      <camera pitch="0" x="1317568.625" y="-540555.625" yaw="0" elev="0" dist="4.31552e+6"/>
-      <animation3d interpolation="0">
-        <keyframes/>
-      </animation3d>
-    </view>
-  </mapViewDocks3D>
-  <main-annotation-layer type="annotation" refreshOnNotifyEnabled="0" autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyMessage="">
-    <id>Annotations_b5021a92_0e5a_416a_a6cc_34e99da9a83b</id>
+  <main-annotation-layer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="annotation" autoRefreshTime="0" refreshOnNotifyMessage="">
+    <id>Annotations_0e3c0b0f_cb59_4948_94d4_a373d232cd8f</id>
     <datasource></datasource>
     <keywordList>
       <value></value>
     </keywordList>
-    <layername></layername>
+    <layername>Annotations</layername>
     <srs>
       <spatialrefsys>
         <wkt></wkt>
@@ -111,7 +98,7 @@
         <description></description>
         <projectionacronym></projectionacronym>
         <ellipsoidacronym></ellipsoidacronym>
-        <geographicflag>true</geographicflag>
+        <geographicflag>false</geographicflag>
       </spatialrefsys>
     </srs>
     <resourceMetadata>
@@ -134,7 +121,7 @@
           <description></description>
           <projectionacronym></projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>true</geographicflag>
+          <geographicflag>false</geographicflag>
         </spatialrefsys>
       </crs>
       <extent/>
@@ -142,8 +129,1184 @@
     <items/>
     <layerOpacity>1</layerOpacity>
   </main-annotation-layer>
-  <projectlayers/>
-  <layerorder/>
+  <projectlayers>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>469512.00335010880371556</xmin>
+        <ymin>-104853.31868041567213368</ymin>
+        <xmax>478639.27715157647617161</xmax>
+        <ymax>-94395.9949508446152322</ymax>
+      </extent>
+      <id>102323230220_3e959026_dce4_45ed_aafe_ebe58f9660e0</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230220.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>102323230220</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer greenBand="2" type="multibandcolor" opacity="1" nodataColor="" alphaBand="-1" blueBand="3" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>478618.90558807307388633</xmin>
+        <ymin>-104871.55238191017997451</ymin>
+        <xmax>487746.67959634988801554</xmax>
+        <ymax>-94413.72844553118920885</ymax>
+      </extent>
+      <id>102323230221_bfce5f56_2ce2_4b75_80d8_927383fc1d43</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230221.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>102323230221</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer greenBand="2" type="multibandcolor" opacity="1" nodataColor="" alphaBand="-1" blueBand="3" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>478639.4285688025993295</xmin>
+        <ymin>-94431.74640345275111031</ymin>
+        <xmax>487767.75652143941260874</xmax>
+        <ymax>-83974.36111232308030594</ymax>
+      </extent>
+      <id>102323230223_4eddfcaa_f6d0_4078_be2e_8eaa9207efc9</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230223.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>102323230223</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer greenBand="2" type="multibandcolor" opacity="1" nodataColor="" alphaBand="-1" blueBand="3" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>487725.80715636198874563</xmin>
+        <ymin>-104889.62654091612785123</ymin>
+        <xmax>496854.08137146703666076</xmax>
+        <ymax>-94431.80260452500078827</ymax>
+      </extent>
+      <id>102323230230_53551f27_99cb_4fc6_8967_4eeab7085da7</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230230.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>102323230230</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer greenBand="2" type="multibandcolor" opacity="1" nodataColor="" alphaBand="-1" blueBand="3" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>487746.7206372645450756</xmin>
+        <ymin>-94450.32154719057143666</ymin>
+        <xmax>496875.54879968124441803</xmax>
+        <ymax>-83992.43604627843888011</ymax>
+      </extent>
+      <id>102323230232_56ee57c7_8ad0_4a23_8b0c_43d97895d7d6</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323230232.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>102323230232</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer greenBand="2" type="multibandcolor" opacity="1" nodataColor="" alphaBand="-1" blueBand="3" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>487767.63365253212396055</xmin>
+        <ymin>-84010.75907855882542208</ymin>
+        <xmax>496896.50370592722902074</xmax>
+        <ymax>-73553.32579985864867922</ymax>
+      </extent>
+      <id>102323232010_b21007e2_f6d8_49fa_9b85_e14a2e98ff1c</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/102323232010.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>102323232010</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer greenBand="2" type="multibandcolor" opacity="1" nodataColor="" alphaBand="-1" blueBand="3" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>NoEnhancement</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer simplifyLocal="1" wkbType="MultiPolygon" geometry="Polygon" refreshOnNotifyEnabled="0" maxScale="0" simplifyDrawingHints="1" autoRefreshEnabled="0" refreshOnNotifyMessage="" simplifyDrawingTol="1" autoRefreshTime="0" type="vector" simplifyAlgorithm="0" styleCategories="AllStyleCategories" simplifyMaxScale="1" minScale="100000000" readOnly="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-1322437.125</xmin>
+        <ymin>-1589179.5</ymin>
+        <xmax>654341.3125</xmax>
+        <ymax>637806.625</ymax>
+      </extent>
+      <id>Border_076f10a8_c7bb_48ce_9bed_1fcab4415fb2</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Vector/border.gpkg|layername=border</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Border</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal durationField="" fixedDuration="0" accumulate="0" durationUnit="min" endField="" enabled="0" mode="0" startExpression="" startField="" endExpression="">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <renderer-v2 enableorderby="0" type="singleSymbol" forceraster="0" symbollevels="0">
+        <symbols>
+          <symbol type="fill" force_rhr="0" alpha="1" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" enabled="1" class="SimpleFill">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,158,23,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="255,255,0,255" k="outline_color"/>
+              <prop v="dash dot" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="no" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks type="StringList">
+          <Option type="QString" value=""/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <legend type="default-vector"/>
+      <referencedLayers/>
+      <fieldConfiguration>
+        <field configurationFlags="None" name="fid">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="GID_0">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="NAME_0">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="fid" name=""/>
+        <alias index="1" field="GID_0" name=""/>
+        <alias index="2" field="NAME_0" name=""/>
+      </aliases>
+      <defaults>
+        <default expression="" field="fid" applyOnUpdate="0"/>
+        <default expression="" field="GID_0" applyOnUpdate="0"/>
+        <default expression="" field="NAME_0" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="1" unique_strength="1" field="fid" exp_strength="0" constraints="3"/>
+        <constraint notnull_strength="0" unique_strength="0" field="GID_0" exp_strength="0" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" field="NAME_0" exp_strength="0" constraints="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="fid" exp="" desc=""/>
+        <constraint field="GID_0" exp="" desc=""/>
+        <constraint field="NAME_0" exp="" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions/>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <dataDefinedFieldProperties/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer simplifyLocal="1" wkbType="MultiPolygon" geometry="Polygon" refreshOnNotifyEnabled="0" maxScale="0" simplifyDrawingHints="1" autoRefreshEnabled="0" refreshOnNotifyMessage="" simplifyDrawingTol="1" autoRefreshTime="0" type="vector" simplifyAlgorithm="0" styleCategories="AllStyleCategories" simplifyMaxScale="1" minScale="100000000" readOnly="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>469547.6875</xmin>
+        <ymin>-104889.578125</ymin>
+        <xmax>496888.71875</xmax>
+        <ymax>-73557.4296875</ymax>
+      </extent>
+      <id>Buildings_4148f525_c16b_4ee7_a08a_e74c76ce394e</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Vector/sw_ug_1_buildings.gpkg</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Buildings</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type>dataset</type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal durationField="" fixedDuration="0" accumulate="0" durationUnit="min" endField="" enabled="0" mode="0" startExpression="" startField="" endExpression="">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <renderer-v2 enableorderby="0" type="singleSymbol" forceraster="0" symbollevels="0">
+        <symbols>
+          <symbol type="fill" force_rhr="0" alpha="1" clip_to_extent="1" name="0">
+            <layer locked="0" pass="0" enabled="1" class="SimpleFill">
+              <prop v="3x:0,0,0,0,0,0" k="border_width_map_unit_scale"/>
+              <prop v="255,0,0,255" k="color"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="255,0,0,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0.26" k="outline_width"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="no" k="style"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions geometryPrecision="0" removeDuplicateNodes="0">
+        <activeChecks type="StringList">
+          <Option type="QString" value=""/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <legend type="default-vector"/>
+      <referencedLayers/>
+      <fieldConfiguration>
+        <field configurationFlags="None" name="fid">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="PolyDate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="ImgDate">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="CAT_ID">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="DataSource">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="layer">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field configurationFlags="None" name="path">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="fid" name=""/>
+        <alias index="1" field="PolyDate" name=""/>
+        <alias index="2" field="ImgDate" name=""/>
+        <alias index="3" field="CAT_ID" name=""/>
+        <alias index="4" field="DataSource" name=""/>
+        <alias index="5" field="layer" name=""/>
+        <alias index="6" field="path" name=""/>
+      </aliases>
+      <defaults>
+        <default expression="" field="fid" applyOnUpdate="0"/>
+        <default expression="" field="PolyDate" applyOnUpdate="0"/>
+        <default expression="" field="ImgDate" applyOnUpdate="0"/>
+        <default expression="" field="CAT_ID" applyOnUpdate="0"/>
+        <default expression="" field="DataSource" applyOnUpdate="0"/>
+        <default expression="" field="layer" applyOnUpdate="0"/>
+        <default expression="" field="path" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint notnull_strength="1" unique_strength="1" field="fid" exp_strength="0" constraints="3"/>
+        <constraint notnull_strength="0" unique_strength="0" field="PolyDate" exp_strength="0" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" field="ImgDate" exp_strength="0" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" field="CAT_ID" exp_strength="0" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" field="DataSource" exp_strength="0" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" field="layer" exp_strength="0" constraints="0"/>
+        <constraint notnull_strength="0" unique_strength="0" field="path" exp_strength="0" constraints="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="fid" exp="" desc=""/>
+        <constraint field="PolyDate" exp="" desc=""/>
+        <constraint field="ImgDate" exp="" desc=""/>
+        <constraint field="CAT_ID" exp="" desc=""/>
+        <constraint field="DataSource" exp="" desc=""/>
+        <constraint field="layer" exp="" desc=""/>
+        <constraint field="path" exp="" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions/>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns/>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <dataDefinedFieldProperties/>
+      <widgets/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer refreshOnNotifyEnabled="0" autoRefreshEnabled="0" type="raster" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" styleCategories="AllStyleCategories" hasScaleBasedVisibilityFlag="0" maxScale="0">
+      <extent>
+        <xmin>469512.00335010880371556</xmin>
+        <ymin>-104889.81563232331245672</ymin>
+        <xmax>496896.61851365928305313</xmax>
+        <ymax>-73553.32579985864867922</ymax>
+      </extent>
+      <id>sw_ug_1_dem_16b537fd_ec93_49da_9f86_1178e9ac4bda</id>
+      <datasource>/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/sw_ug_1_dem.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>sw_ug_1_dem</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["unnamed",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",20],PARAMETER["standard_parallel_2",-23],PARAMETER["latitude_of_center",0],PARAMETER["longitude_of_center",25],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["Meter",1]]</wkt>
+          <proj4>+proj=aea +lat_1=20 +lat_2=-23 +lat_0=0 +lon_0=25 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>0</srsid>
+          <srid>0</srid>
+          <authid></authid>
+          <description></description>
+          <projectionacronym>aea</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <temporal fetchMode="0" enabled="0" mode="0">
+        <fixedRange>
+          <start></start>
+          <end></end>
+        </fixedRange>
+      </temporal>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <pipe>
+        <provider>
+          <resampling zoomedInResamplingMethod="nearestNeighbour" zoomedOutResamplingMethod="nearestNeighbour" enabled="false" maxOversampling="2"/>
+        </provider>
+        <rasterrenderer type="singlebandgray" opacity="1" gradient="BlackToWhite" grayBand="1" nodataColor="" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>1713</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0" gamma="1"/>
+        <huesaturation colorizeOn="0" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeStrength="100" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+        <resamplingStage>resamplingFilter</resamplingStage>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="Buildings_4148f525_c16b_4ee7_a08a_e74c76ce394e"/>
+    <layer id="Border_076f10a8_c7bb_48ce_9bed_1fcab4415fb2"/>
+    <layer id="102323230220_3e959026_dce4_45ed_aafe_ebe58f9660e0"/>
+    <layer id="102323230221_bfce5f56_2ce2_4b75_80d8_927383fc1d43"/>
+    <layer id="102323230223_4eddfcaa_f6d0_4078_be2e_8eaa9207efc9"/>
+    <layer id="102323230230_53551f27_99cb_4fc6_8967_4eeab7085da7"/>
+    <layer id="102323230232_56ee57c7_8ad0_4a23_8b0c_43d97895d7d6"/>
+    <layer id="102323232010_b21007e2_f6d8_49fa_9b85_e14a2e98ff1c"/>
+    <layer id="sw_ug_1_dem_16b537fd_ec93_49da_9f86_1178e9ac4bda"/>
+  </layerorder>
   <properties>
     <Digitizing>
       <AvoidIntersectionsMode type="int">0</AvoidIntersectionsMode>
@@ -157,12 +1320,6 @@
       <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
       <SelectionColorRedPart type="int">255</SelectionColorRedPart>
     </Gui>
-    <Legend>
-      <filterByMap type="bool">false</filterByMap>
-    </Legend>
-    <Measure>
-      <Ellipsoid type="QString"></Ellipsoid>
-    </Measure>
     <Measurement>
       <AreaUnits type="QString"></AreaUnits>
       <DistanceUnits type="QString"></DistanceUnits>
@@ -187,9 +1344,6 @@
       <Automatic type="bool">true</Automatic>
       <DecimalPlaces type="int">2</DecimalPlaces>
     </PositionPrecision>
-    <SpatialRefSys>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
   </properties>
   <dataDefinedServerProperties>
     <Option type="Map">
@@ -209,7 +1363,7 @@
     <abstract></abstract>
     <links/>
     <author>Aaron</author>
-    <creation>2020-06-20T16:19:25</creation>
+    <creation>2020-12-01T00:00:51</creation>
   </projectMetadata>
   <Annotations/>
   <Layouts/>
@@ -217,7 +1371,7 @@
   <ProjectViewSettings UseProjectScales="0">
     <Scales/>
   </ProjectViewSettings>
-  <ProjectTimeSettings timeStepUnit="h" timeStep="1" frameRate="1" cumulativeTemporalRange="0"/>
+  <ProjectTimeSettings cumulativeTemporalRange="0" timeStepUnit="h" timeStep="1" frameRate="1"/>
   <ProjectDisplaySettings>
     <BearingFormat id="bearing">
       <Option type="Map">
