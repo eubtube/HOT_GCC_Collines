@@ -183,3 +183,5 @@ def build_proj(id):
 
     # Exit QGIS
     qgs.exitQgis()
+
+build_proj(id)
