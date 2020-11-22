@@ -40,10 +40,13 @@ the `files` folder**
 - `gdal_stuff.sh` is simply a list of the `GDAL` snippets that are used in
 `create_projects.sh` file above.
 
+- In the `scratch` folder within, you'll find `Grid Value and Geopandas Exploration.ipynb`,
+a very messy Jupyter Notebook where added the row and column fields to the 
+intermediary `colline_grid_joined.gpkg` file and saved it as the final 
+`colline_grid_joined_adj.gpkg` which is included here
+
 In the `files` folder, you will find some of the geospatial files needed to test
-or view some of the QGIS projects. Absent are the large JAXA files (can share
-via cloud sharing if needed) and the Maxar Images (too big to share all, but I can
-share a sample).
+or view some of the scripts or QGIS projects for visualization.
 
 Included:
 - `Border.gpkg`: DRC polygon file (UTM 35S Projection)
@@ -55,9 +58,12 @@ file above.
 - `colline_grid_joined_adj.gpkg`: a grid based on the colline extents file above.
 Grid draped over the entire colline area and a row/column location associated
 with each cell that can ultimately be associated with a quadkey for the tile ID.
-**for use with the `Grid Value and Geopandas Exploration.ipynb` file to break
+**for use with the `iterate_grid.ipynb` file to break
 break the grid into projects**
 - `102022.prj`: Esri projection file for Africa Albers projection
+- `colline_grids.qgs`: a QGIS project for viewing the colline tile extents and the grid
+for visualization of files for `iterate_grid.ipynb`.
+- `3d_template_clean.qgs`: a QGIS project for testing `add_to_qgisproject.py`
 
 Not Included (but needed for the scripts):
 - The single JAXA file for the entire AOI in Africa Albers Projections used to make smaller project DEMs (about 5GB)
