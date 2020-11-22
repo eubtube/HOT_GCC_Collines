@@ -20,7 +20,7 @@ for i in [list of all 3x3s tiles list]; do
       while read j; do
         echo Converting and Copying $j
         # Convert tiles to Africa Albers and send to file
-        gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\ #change
+        gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\ #change
           -r near -of GTiff -co COMPRESS=JPEG -co JPEG_QUALITY=75 -co PHOTOMETRIC=YCBCR\
           /media/eubtube/Seagate\ Backup\ Plus\ Drive/Congo_Tifs/raster/GeoTIFF/$j.tif\
           $j.tif
@@ -29,14 +29,14 @@ for i in [list of all 3x3s tiles list]; do
 
     mkdir "Vector"
       cd Vector
-      cp $i_aoi.gpkg #from file with all aois  OR insert python script here that creates AOI from tile names and places here..
+      cp $i_aoi.gpkg #from file with all aois OR insert python script here that creates AOI from tile names and places here..
       cp '/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/vector/Border.gpkg' . #change to vector file in github
-      ogr2ogr -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\ # change path
+      ogr2ogr -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\ # change path
        -clipsrc $i_aoi.gpkg -f 'GPKG' -overwrite $i_buildings.gpkg /home/eubtube/Documents/DRC-Uganda_Collines_3D/\
       Vector/2019_Maxar_Ecopia_DRC-Uganda_building_footprints.gpkg # change path
       cd ..
 
-    cp /home/eubtube/Documents/colline_automation/3d_template.qgs #change path
+    cp /home/eubtube/Documents/colline_automation/files/3d_template_clean.qgs #change path
 
     cd Raster
       gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\ # change path
@@ -54,10 +54,10 @@ echo finished
 
 # Next Steps
 # 1) create the AOI & Place in Vector folder
-  # Do with python when pulling the tile IDs
+  # Do with python when pulling the tile IDs from `Grid Value and Geopandas Exploration.ipynb`
   # Search for col, row then throw range of all vals into a txt file
 # 2) Clip the DSM to the AOI and place result in Raster folder
-gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\
+gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\
  -of GTiff -cutline /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/kisoro_5/Vector/aoi.gpkg\
  -cl aoi -crop_to_cutline -co COMPRESS=LZW -co TILED=YES\
  "/media/eubtube/Seagate Backup Plus Drive/Congo_Tifs/raster/jaxa/jaxa_all_merged.tif"\
@@ -65,18 +65,9 @@ gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automatio
 
 # 3) Clip the buildings to the AOI and place result in Vector folder
     # Might need to break down the buildings into more manageable chunks as it takes a little while to cut
-ogr2ogr -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\ # adjust to
+ogr2ogr -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/files/102022.prj\ # adjust to
  -clipsrc aoi.gpkg -f 'GPKG' kisoro_2_buildings.gpkg /home/eubtube/Documents/DRC-Uganda_Collines_3D/\
 Vector/2019_Maxar_Ecopia_DRC-Uganda_building_footprints.gpkg
 
 # 4) Manipulate HTML file to include all the new outputs in the QGIS File
     # PyQGIS api to place files into empty qgis 3D project (see `add_to_qgisproject.py`)
-
-while read j; do
-  echo Converting and Copying $j
-  # Convert tiles to Africa Albers and send to file
-  gdalwarp -s_srs EPSG:4326 -t_srs ESRI::/home/eubtube/Documents/colline_automation/102022.prj\
-    -r near -of GTiff -co COMPRESS=JPEG -co JPEG_QUALITY=75 -co PHOTOMETRIC=YCBCR\
-    /media/eubtube/Seagate\ Backup\ Plus\ Drive/Congo_Tifs/raster/GeoTIFF/$j.tif\
-    $j.tif
-done < tiles.txt

@@ -4,12 +4,21 @@ add_mult_files_q.py
 kisoro_1_tiles.csv
 Py_Raster_Explore.ipynb
 pytest.py
+Lasted UBOS Villages Boundaries for GCC-20200327T064130Z-001
+colline_grid_joined.gpkg
+colline_grid.gpkg
+mambasa_aoi_buildings.gpkg
+mambasa_aoi_tile_extents.gpkg
+2019_Maxar_Ecopia_DRC-Uganda_building_footprints.gpkg
+colline_extent.gpkg
 
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
+*.qgs~
+
 
 # OS generated files #
 ######################
@@ -20,3 +29,4 @@ pytest.py
 .Trashes
 ehthumbs.db
 Thumbs.db
+.fuse_hidden*
