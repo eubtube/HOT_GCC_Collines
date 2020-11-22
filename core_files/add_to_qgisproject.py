@@ -1,23 +1,75 @@
 #!/bin/python3.6
 
-import os
+import sys, os
+
+from qgis.PyQt.QtCore import (
+    QRectF,
+)
+
 from qgis.core import *
-import os, sys
+'''
+(
+    QgsProject,
+    QgsApplication,
+    QgsLayerTreeModel,
+    QgsLayerTreeGroup,
+    QgsLayerTreeLayer,
+    QgsVectorLayer,
+    QgsFillSymbol,
+    QgsDataSourceUri,
+    QgsCategorizedSymbolRenderer,
+    QgsClassificationRange,
+    QgsPointXY,
+    QgsProject,
+    QgsExpression,
+    QgsField,
+    QgsFields,
+    QgsFeature,
+    QgsFeatureRequest,
+    QgsFeatureRenderer,
+    QgsGeometry,
+    QgsGraduatedSymbolRenderer,
+    QgsMarkerSymbol,
+    QgsMessageLog,
+    QgsRectangle,
+    QgsRendererCategory,
+    QgsRendererRange,
+    QgsSymbol,
+    QgsVectorDataProvider,
+    QgsVectorFileWriter,
+    QgsWkbTypes,
+    QgsSpatialIndex,
+    QgsVectorLayerUtils
+)
+'''
 
-"""
-QgsProject, QgsLayerTreeGroup, QgsLayerTreeLayer, QgsVectorLayer,QgsLayerTreeModel
-"""
+from qgis.core.additions.edit import edit
 
+from qgis.PyQt.QtGui import (
+    QColor,
+)
+
+from qgis.gui import (
+    QgsLayerTreeView,
+    QgsMapCanvas,
+    QgsVertexMarker,
+    QgsMapCanvasItem,
+    QgsRubberBand,
+)
 
 ###### Add Vector Layers
 
 # Add and style buildings
 def add_vector_layers(id):
-    layer1 = iface.addVectorLayer(pathv + str(id) + "_buildings.gpkg", "Buildings", "ogr")
+    layer1 = QgsVectorLayer(pathv + id +"_buildings.gpkg", "Buildings", "ogr")
     if not layer1 or not layer1.isValid():
         print("Layer failed to load!")
+    # adds layer to the canvas
+    QgsProject.instance().addMapLayer(layer1, True)
 
-    layer1 = iface.activeLayer()
+    # Verifies that layer was read
+    print(layer1.displayField())
+
     symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
                                          'color': 'red',
                                          'joinstyle': 'bevel',
@@ -32,12 +84,16 @@ def add_vector_layers(id):
     layer1.renderer().setSymbol(symbol)
     layer1.triggerRepaint()
 
-    # Add and style border
-    layer2 = iface.addVectorLayer(pathv + "Border.gpkg|layername=Border", "Border", "ogr")
+    # Add and style border layer
+    layer2 = QgsVectorLayer(pathv + "border.gpkg|layername=border", "Border", "ogr")
     if not layer2 or not layer2.isValid():
         print("Layer failed to load!")
 
-    layer2 = iface.activeLayer()
+    QgsProject.instance().addMapLayer(layer2, True)
+
+    # Verifies that layer was read
+    print(layer2.displayField())
+
     symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
                                          'color': '255,158,23,255',
                                          'joinstyle': 'bevel',
@@ -52,20 +108,21 @@ def add_vector_layers(id):
     layer2.renderer().setSymbol(symbol)
     layer2.triggerRepaint()
 
+    return(layer1)
+    return(layer2)
+
 # Sets the extent to the clipped buildings
 
 def set_extent(layer1):
-    layer1 = iface.activeLayer()
     layer1.selectAll()
-    canvas = iface.mapCanvas()
+    canvas = QgsMapCanvas()
     canvas.zoomToSelected(layer1)
     layer1.removeSelection()
 
 ######## Add Raster Layers
 
-def add_tile_group():
+def add_tile_group(pathr):
     # Set up Tiles Group
-    layerTree = iface.layerTreeCanvasBridge().rootGroup()
     root = QgsProject.instance().layerTreeRoot()
     tiles_group = root.insertGroup(-1, "Tiles")
 
@@ -74,7 +131,7 @@ def add_tile_group():
         if (filename.endswith('.tif')) & (('dem' in filename) == False): # only files that do not have "dem in their name"
             rlayer = QgsRasterLayer(pathr + filename, filename.strip('.tif'))  # Os.path - get only extension
             QgsProject.instance().addMapLayer(rlayer, False)
-            layerTree.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
+            root.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
             node_rlayer = QgsLayerTreeLayer(rlayer)
             tiles_group.insertChildNode(0, node_rlayer)
             root.removeLayer(rlayer)
@@ -87,37 +144,42 @@ def add_dem(id):
     dem = id + '_dem.tif'
     dem_layer = QgsRasterLayer(pathr + dem, dem.strip('.tif'))
     QgsProject.instance().addMapLayer(dem_layer, False)
-    layerTree.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
+    root.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
 
 
 ''' Don't seem to be able to set up a 3D view with current bindings...
 # Set up 3D view
 Qgs3D.initialize()
 '''
-def build_proj(id, ):
+def build_proj(id):
+    pathv = '~/Projects/' + id + '/Vector/'
+    pathr = '~/Projects/' + id + '/Raster/'
+
     QgsApplication.setPrefixPath("/usr/bin/qgis", True)
     qgs = QgsApplication([], False) # "False" prevents the gui from opening
     qgs.initQgis()
-
-    ProjectName = str(id) + ".qgs"
 
     # Will need to start a project
     project = QgsProject.instance()
     project.read('~/files/3d_template_clean.qgs') # How to generalize this??
 
-# Might need to initate qgis when working from Bash
+    # Adds vector layers
+    add_vector_layers(id)
 
+    # Sets extent to building layer
+    set_extent(layer1)
 
+    # Adds all tiles as a grouped file in TOC
+    add_tile_group(pathr)
 
-# project_path = QFileInfo(ProjectName)
+    # Adds DEM below Tiles
+    add_dem(id)
 
-pathv = '~/Projects/' + id + '/Vector/'
-pathr = '~/Projects/' + id + '/Raster/'
+    # Prints the
+    print(QgsProject.instance().mapLayers().values())
 
-#canvas = iface.mapCanvas()
+    # Write to the QGIS Project, commented out when testing to avoid overwriting blank file
+    project.write()
 
-# Write to the QGIS Project, commented out when testing to avoid overwriting blank file
-project.write('/home/eubtube/Documents/colline_automation/3d_template_clean.qgs')
-
-# Exit QGIS
-qgs.exitQgis()
+    # Exit QGIS
+    qgs.exitQgis()
