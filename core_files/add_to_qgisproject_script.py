@@ -57,6 +57,8 @@ from qgis.gui import (
     QgsRubberBand,
 )
 
+
+
 #ProjectName = "sw_ug_1_test.qgs"
 
 # Used to initate qgis when working from Bash
@@ -96,8 +98,6 @@ symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,
                                      'outline_width': '0.26',
                                      'outline_width_unit': 'MM',
                                      'style': 'no'})
-
-
 layer1.renderer().setSymbol(symbol)
 layer1.triggerRepaint()
 

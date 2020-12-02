@@ -57,36 +57,32 @@ from qgis.gui import (
     QgsRubberBand,
 )
 
+import mylayers
+
 ###### Add Vector Layers
 
 # Add and style buildings
-def add_vector_layers(qpid, pathv):
-    layer1 = QgsVectorLayer(pathv + qpid  +"_buildings.gpkg", "Buildings", "ogr")
+def add_vector_layers(id): # consume a list, dataset list of lists, sublist of data file, style file.
+    # For layers in [layers to add]:
+    '''
+    Layer
+    Styling
+    Change text files between projects - JSON for style
+    List of layers =
+    '''
+
+    layer1 = QgsVectorLayer(pathv + id +"_buildings.gpkg", "Buildings", "ogr")
     if not layer1 or not layer1.isValid():
         print("Layer failed to load!")
-
     # adds layer to the canvas
     QgsProject.instance().addMapLayer(layer1, True)
 
     # Verifies that layer was read
     print(layer1.displayField())
 
-    symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         'color': 'red',
-                                         'joinstyle': 'bevel',
-                                         'offset': '0,0',
-                                         'offset_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         "offset_unit": 'MM',
-                                         'outline_style': 'solid',
-                                         'outline_color': 'red',
-                                         'outline_width': '0.26',
-                                         'outline_width_unit': 'MM',
-                                         'style': 'no'})
+    symbol = QgsFillSymbol.createSimple(mylayers.red_style())
 
-    renderer1 = layer1.renderer().setSymbol(symbol)
-    print(type(renderer1))
-    print(dir(renderer1))
-    #layer1.renderer().setSymbol(symbol)
+    layer1.renderer().setSymbol(symbol)
     layer1.triggerRepaint()
 
     # Add and style border layer
@@ -99,17 +95,7 @@ def add_vector_layers(qpid, pathv):
     # Verifies that layer was read
     print(layer2.displayField())
 
-    symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         'color': '255,158,23,255',
-                                         'joinstyle': 'bevel',
-                                         'offset': '0,0',
-                                         'offset_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         "offset_unit": 'MM',
-                                         'outline_style': 'dash dot',
-                                         'outline_color': 'yellow',
-                                         'outline_width': '0.26',
-                                         'outline_width_unit': 'MM',
-                                         'style': 'no'})
+    symbol = QgsFillSymbol.createSimple(mylayers.yellow_style())
     layer2.renderer().setSymbol(symbol)
     layer2.triggerRepaint()
 
@@ -145,8 +131,8 @@ def add_tile_group(pathr):
 
 
 # Adds the DEM below
-def add_dem(qpid, pathr):
-    dem = qpid  + '_dem.tif'
+def add_dem(id):
+    dem = id + '_dem.tif'
     dem_layer = QgsRasterLayer(pathr + dem, dem.strip('.tif'))
     QgsProject.instance().addMapLayer(dem_layer, False)
     root.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
@@ -156,9 +142,9 @@ def add_dem(qpid, pathr):
 # Set up 3D view
 Qgs3D.initialize()
 '''
-def build_proj(qpid):
-    pathv = '~/Projects/' + qpid  + '/Vector/'
-    pathr = '~/Projects/' + qpid  + '/Raster/'
+def build_proj(id):
+    # pathv = '~/Projects/' + id + '/Vector/'
+    # pathr = '~/Projects/' + id + '/Raster/'
 
     QgsApplication.setPrefixPath("/usr/bin/qgis", True)
     qgs = QgsApplication([], False) # "False" prevents the gui from opening
@@ -166,10 +152,10 @@ def build_proj(qpid):
 
     # Will need to start a project
     project = QgsProject.instance()
-    project.read('~/files/3d_template_clean.qgs') # How to generalize this??
+    # project.read('~/files/3d_template_clean.qgs') # How to generalize this??
 
     # Adds vector layers
-    add_vector_layers(qpid, pathv)
+    add_vector_layers(id)
 
     # Sets extent to building layer
     set_extent(layer1)
@@ -178,7 +164,7 @@ def build_proj(qpid):
     add_tile_group(pathr)
 
     # Adds DEM below Tiles
-    add_dem(qpid)
+    add_dem(id)
 
     # Prints the
     print(QgsProject.instance().mapLayers().values())
@@ -190,6 +176,5 @@ def build_proj(qpid):
     qgs.exitQgis()
 
 if __name__ == '__main__':
-    for arg in sys.argv:
-        print(arg)
-    build_proj(sys.argv[1])
+    #build_proj(id)
+    print('Hey there')
