@@ -76,7 +76,7 @@ pathr = '/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Raster/'
 ###### Add Vector Layers
 
 # Add and style buildings
- # Creates layer1 variable
+# Creates layer1 variable
 layer1 = QgsVectorLayer(pathv + "sw_ug_1_buildings.gpkg", "Buildings", "ogr")
 if not layer1 or not layer1.isValid():
     print("Layer failed to load!")
@@ -85,7 +85,6 @@ QgsProject.instance().addMapLayer(layer1, True)
 
 print(layer1.displayField())
 
-#layer1 = iface.activeLayer()
 symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
                                      'color': 'red',
                                      'joinstyle': 'bevel',
