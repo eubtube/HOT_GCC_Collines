@@ -14,7 +14,7 @@ overview of tasks done and to be done for this project. That's a good place to
 start. Also included is a tutorial doc for how to do the digitization once a
 project is set up.
 
-In the `core_files` folder, you'll find four core files for the project:
+In the `scripts` folder, you'll find four core scripts for the project:
 
 - `create_projects.sh`: the main script that will iterate through lists of
 3x3 groups of tiles. This currently has several placeholders in it that need
@@ -43,7 +43,7 @@ the `files` folder**
 - In the `scratch` folder within, you'll find `Grid Value and Geopandas Exploration.ipynb`,
 a very messy Jupyter Notebook where added the row and column fields to the 
 intermediary `colline_grid_joined.gpkg` file and saved it as the final 
-`colline_grid_joined_adj.gpkg` which is included here
+`colline_grid_joined_adj.gpkg` which is included here. 
 
 In the `files` folder, you will find some of the geospatial files needed to test
 or view some of the scripts or QGIS projects for visualization.
