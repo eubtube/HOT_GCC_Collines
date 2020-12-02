@@ -82,6 +82,9 @@ def add_vector_layers(qpid, pathv):
                                          'outline_width': '0.26',
                                          'outline_width_unit': 'MM',
                                          'style': 'no'})
+    # Pulled from previous version:
+    #renderer = layer1.renderer()
+    #print("Type:", renderer.type())
 
     renderer1 = layer1.renderer().setSymbol(symbol)
     print(type(renderer1))
