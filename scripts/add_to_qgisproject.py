@@ -83,10 +83,10 @@ def add_vector_layers(qpid, pathv):
                                          'outline_width_unit': 'MM',
                                          'style': 'no'})
     # Pulled from previous version:
-    #renderer = layer1.renderer()
-    #print("Type:", renderer.type())
+    renderer = layer1.renderer()
+    print("Type:", renderer.type())
 
-    renderer1 = layer1.renderer().setSymbol(symbol)
+    #renderer1 = layer1.renderer().setSymbol(symbol)
     print(type(renderer1))
     print(dir(renderer1))
     #layer1.renderer().setSymbol(symbol)
@@ -160,7 +160,7 @@ def add_dem(qpid, pathr):
 Qgs3D.initialize()
 '''
 def build_proj(qpid):
-    pathv = '~/Projects/' + qpid  + '/Vector/'
+    pathv = '/media/eubtube/Seagate Backup Plus Drive/Projects/' + qpid  + '/Vector/'
     pathr = '~/Projects/' + qpid  + '/Raster/'
 
     QgsApplication.setPrefixPath("/usr/bin/qgis", True)
