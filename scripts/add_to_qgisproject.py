@@ -2,6 +2,9 @@
 
 import sys, os
 
+import pdb
+import argparse
+
 from qgis.PyQt.QtCore import (
     QRectF,
 )
@@ -61,7 +64,10 @@ from qgis.gui import (
 
 # Add and style buildings
 def add_vector_layers(qpid, pathv):
-    layer1 = QgsVectorLayer(pathv + qpid  +"_buildings.gpkg", "Buildings", "ogr")
+    #print(pathv)
+    buildingfile = os.path.join(pathv, '{}_buildings.gpkg'.format(qpid))
+    print(buildingfile)
+    layer1 = QgsVectorLayer(buildingfile, "Buildings", "ogr")
     if not layer1 or not layer1.isValid():
         print("Layer failed to load!")
 
@@ -82,18 +88,19 @@ def add_vector_layers(qpid, pathv):
                                          'outline_width': '0.26',
                                          'outline_width_unit': 'MM',
                                          'style': 'no'})
-    # Pulled from previous version:
-    renderer = layer1.renderer()
-    print("Type:", renderer.type())
+    # Pulled from previous version (but still doesn't ):
+    #renderer = layer1.renderer()
+    #print("Type:", renderer.type())
 
     #renderer1 = layer1.renderer().setSymbol(symbol)
-    print(type(renderer1))
-    print(dir(renderer1))
-    #layer1.renderer().setSymbol(symbol)
+    #pdb.set_trace()
+    #print(dir(renderer1))
+    layer1.renderer().setSymbol(symbol)
     layer1.triggerRepaint()
 
     # Add and style border layer
-    layer2 = QgsVectorLayer(pathv + "border.gpkg|layername=border", "Border", "ogr")
+    borderfile = os.path.join(pathv, 'border.gpkg|layername=border')
+    layer2 = QgsVectorLayer(borderfile, "Border", "ogr")
     if not layer2 or not layer2.isValid():
         print("Layer failed to load!")
 
@@ -116,12 +123,12 @@ def add_vector_layers(qpid, pathv):
     layer2.renderer().setSymbol(symbol)
     layer2.triggerRepaint()
 
-    return(layer1)
-    return(layer2)
+    return layer1, layer2
 
 # Sets the extent to the clipped buildings
 
-def set_extent(layer1):
+def set_extent():
+    layer1, layer2 = add_vector_layers(qpid, pathv)
     layer1.selectAll()
     canvas = QgsMapCanvas()
     canvas.zoomToSelected(layer1)
@@ -137,7 +144,8 @@ def add_tile_group(pathr):
     # Adds just the tiles to the group
     for filename in os.listdir(pathr):
         if (filename.endswith('.tif')) & (('dem' in filename) == False): # only files that do not have "dem in their name"
-            rlayer = QgsRasterLayer(pathr + filename, filename.strip('.tif'))  # Os.path - get only extension
+            tile = os.path.join(pathr, filename)
+            rlayer = QgsRasterLayer(tile, os.path.splitext(filename)[0])  # Os.path - get only extension
             QgsProject.instance().addMapLayer(rlayer, False)
             root.insertChildNode(-1, QgsLayerTreeLayer(rlayer))
             node_rlayer = QgsLayerTreeLayer(rlayer)
@@ -149,8 +157,8 @@ def add_tile_group(pathr):
 
 # Adds the DEM below
 def add_dem(qpid, pathr):
-    dem = qpid  + '_dem.tif'
-    dem_layer = QgsRasterLayer(pathr + dem, dem.strip('.tif'))
+    dem = os.path.join(pathr, '{}_dem.tif'.format(qpid))
+    dem_layer = QgsRasterLayer(dem, '{}_dem'.format(qpid))
     QgsProject.instance().addMapLayer(dem_layer, False)
     root.insertChildNode(-1, QgsLayerTreeLayer(dem_layer))
 
@@ -159,9 +167,8 @@ def add_dem(qpid, pathr):
 # Set up 3D view
 Qgs3D.initialize()
 '''
-def build_proj(qpid):
-    pathv = '/media/eubtube/Seagate Backup Plus Drive/Projects/' + qpid  + '/Vector/'
-    pathr = '~/Projects/' + qpid  + '/Raster/'
+def build_proj(qpid, pdir, pathv, pathr):
+
 
     QgsApplication.setPrefixPath("/usr/bin/qgis", True)
     qgs = QgsApplication([], False) # "False" prevents the gui from opening
@@ -193,6 +200,15 @@ def build_proj(qpid):
     qgs.exitQgis()
 
 if __name__ == '__main__':
-    for arg in sys.argv:
-        print(arg)
-    build_proj(sys.argv[1])
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("-vd", "--vector_directory", help = "Directory path containing your vector files.")
+    parser.add_argument("-rd", "--raster_directory", help = "Directory path containing your raster files.")
+    parser.add_argument("-prid", "--project_id", help = "Your project ID.")
+    parser.add_argument("-pd", "--project_directory", help = "Directory path containing all you project files.")
+
+    options = parser.parse_args()
+    #print(options)
+    #print(type(options))
+
+    build_proj(options.project_id, options.project_directory, options.vector_directory, options.raster_directory)
