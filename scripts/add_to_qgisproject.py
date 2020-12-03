@@ -4,6 +4,7 @@ import sys, os
 
 import pdb
 import argparse
+import mylayers
 
 from qgis.PyQt.QtCore import (
     QRectF,
@@ -77,17 +78,7 @@ def add_vector_layers(qpid, pathv):
     # Verifies that layer was read
     print(layer1.displayField())
 
-    symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         'color': 'red',
-                                         'joinstyle': 'bevel',
-                                         'offset': '0,0',
-                                         'offset_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         "offset_unit": 'MM',
-                                         'outline_style': 'solid',
-                                         'outline_color': 'red',
-                                         'outline_width': '0.26',
-                                         'outline_width_unit': 'MM',
-                                         'style': 'no'})
+    symbol = QgsFillSymbol.createSimple(mylayers.red_style)
     # Pulled from previous version (but still doesn't ):
     #renderer = layer1.renderer()
     #print("Type:", renderer.type())
@@ -109,17 +100,7 @@ def add_vector_layers(qpid, pathv):
     # Verifies that layer was read
     print(layer2.displayField())
 
-    symbol = QgsFillSymbol.createSimple({'border_width_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         'color': '255,158,23,255',
-                                         'joinstyle': 'bevel',
-                                         'offset': '0,0',
-                                         'offset_map_unit_scale': '3x:0,0,0,0,0,0',
-                                         "offset_unit": 'MM',
-                                         'outline_style': 'dash dot',
-                                         'outline_color': 'yellow',
-                                         'outline_width': '0.26',
-                                         'outline_width_unit': 'MM',
-                                         'style': 'no'})
+    symbol = QgsFillSymbol.createSimple(mylayers.yellow_style)
     layer2.renderer().setSymbol(symbol)
     layer2.triggerRepaint()
 
@@ -176,13 +157,13 @@ def build_proj(qpid, pdir, pathv, pathr):
 
     # Will need to start a project
     project = QgsProject.instance()
-    project.read('~/files/3d_template_clean.qgs') # How to generalize this??
+    project.read('~/files/3d_template_clean.qgs') # How to generalize this??  May be OK
 
     # Adds vector layers
     add_vector_layers(qpid, pathv)
 
     # Sets extent to building layer
-    set_extent(layer1)
+    set_extent()
 
     # Adds all tiles as a grouped file in TOC
     add_tile_group(pathr)
