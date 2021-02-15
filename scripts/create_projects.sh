@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # This script sets up the structure for the folders of each 3D project and running operations.
+# TODO: Replace placeholders, give correct working directories.
+# See if there is a way to pass ids through with quotes around path name (something like 'path for python')
 
 echo creating the folders
 cd /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/ #navigate to a folder for outputs
@@ -48,7 +50,11 @@ for i in [list of all "projects"]; do
           $i_dem.tif
     cd ..
 
-    python3.6 add_to_qgisproject.py # pass any arguments that will be necessary
+    python3.6 add_to_qgisproject.py -vd '/media/eubtube/Seagate Backup Plus Drive/Projects/SW_UG_1/Vector'\
+     -rd /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/$i/Raster\
+     -prid $i\
+     -pd /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/$i\
+     -qt /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/SW_UG_1/3d_template_clean.qgs # pass any arguments that will be necessary
     # also ensure that QGIS installation of Python is being used
 done
 

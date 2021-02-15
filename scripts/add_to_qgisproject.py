@@ -6,13 +6,9 @@ import pdb
 import argparse
 import mylayers
 
-from qgis.PyQt.QtCore import (
-    QRectF,
-)
+from qgis.PyQt.QtCore import QRectF
 
-from qgis.core import *
-'''
-(
+from qgis.core import (
     QgsProject,
     QgsApplication,
     QgsLayerTreeModel,
@@ -20,46 +16,12 @@ from qgis.core import *
     QgsLayerTreeLayer,
     QgsVectorLayer,
     QgsFillSymbol,
-    QgsDataSourceUri,
-    QgsCategorizedSymbolRenderer,
-    QgsClassificationRange,
-    QgsPointXY,
     QgsProject,
-    QgsExpression,
-    QgsField,
-    QgsFields,
-    QgsFeature,
-    QgsFeatureRequest,
-    QgsFeatureRenderer,
-    QgsGeometry,
-    QgsGraduatedSymbolRenderer,
-    QgsMarkerSymbol,
-    QgsMessageLog,
-    QgsRectangle,
-    QgsRendererCategory,
-    QgsRendererRange,
-    QgsSymbol,
-    QgsVectorDataProvider,
-    QgsVectorFileWriter,
-    QgsWkbTypes,
-    QgsSpatialIndex,
-    QgsVectorLayerUtils
-)
-'''
-
-from qgis.core.additions.edit import edit
-
-from qgis.PyQt.QtGui import (
-    QColor,
+    QgsRasterLayer
 )
 
-from qgis.gui import (
-    QgsLayerTreeView,
-    QgsMapCanvas,
-    QgsVertexMarker,
-    QgsMapCanvasItem,
-    QgsRubberBand,
-)
+from qgis.gui import QgsMapCanvas
+
 
 ###### Add Vector Layers
 
@@ -155,7 +117,7 @@ def add_dem(project, root, qpid, pathr):
 
 
 ''' Don't seem to be able to set up a 3D view with current bindings...
-# Set up 3D view
+But the below may be useful
 Qgs3D.initialize()
 '''
 def build_proj(qpid, pdir, pathv, pathr, template):
@@ -166,8 +128,7 @@ def build_proj(qpid, pdir, pathv, pathr, template):
 
     # Will need to start a project
     project = QgsProject.instance()
-    project.read(template) # How to generalize this??  May be OK
-
+    project.read(template)
     # Creates a layer tree in the QGIS project called root
     #root = QgsProject.instance().layerTreeRoot()
     root = project.layerTreeRoot()
@@ -199,7 +160,7 @@ if __name__ == '__main__':
     parser.add_argument("-vd", "--vector_directory", help = "Directory path containing your vector files.")
     parser.add_argument("-rd", "--raster_directory", help = "Directory path containing your raster files.")
     parser.add_argument("-prid", "--project_id", help = "Your project ID.")
-    parser.add_argument("-pd", "--project_directory", help = "Directory path containing all you project files.")
+    parser.add_argument("-pd", "--project_directory", help = "Directory path containing all your project files.")
     parser.add_argument("-qt", "--qgis_template", help = "QGIS project template")
 
     options = parser.parse_args()
