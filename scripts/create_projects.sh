@@ -6,7 +6,7 @@
 
 echo creating the folders
 cd /media/eubtube/Seagate\ Backup\ Plus\ Drive/Projects/ #navigate to a folder for outputs
-for i in [list of all "projects"]; do
+for i in '/home/eubtube/Documents/HOT_GCC_Collines/files/filtered_projects.txt'; do #list of project names
     echo $i # This should be the project ID
     # cd ~/Documents/test  # set your output folder in this line, prob don't need
     y=$( echo $i | sed -r "s/(.+)\..+/\1/" ) # This removes the file extension for the folder name
