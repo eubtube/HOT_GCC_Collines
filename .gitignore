@@ -13,6 +13,8 @@ mambasa_aoi_tile_extents.gpkg
 colline_extent.gpkg
 3d_template (copy).html
 3d_template (copy).qgs
+test_aois
+test_projtiles
 
 # Logs and databases #
 ######################
